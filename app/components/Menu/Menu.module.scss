@@ -1,0 +1,96 @@
+.menuContainer {
+    .menuBtn {
+        position: fixed;
+        top: 3rem;
+        right: 4rem;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: black;
+
+        .menuTextContainer {
+            color: black;
+            backface-visibility: hidden;
+            will-change: transform;
+
+            .menuText {
+                display: inline-block;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-smooth: always;
+                will-change: transform;
+
+                &:nth-child(2) {
+                    position: absolute; 
+                    inset: 0;
+                }
+            }
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            .bar {
+                background-color: black;
+                height: 2px;
+                width: 23px;
+            }
+        }
+    }
+
+    .menu {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #1F1F1F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .navContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+
+            .image {
+                height: 100%;
+                width: 500px;
+                object-fit: cover;
+            }
+            .nav {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .linkContainer {
+                    display: inline-flex;
+                    flex-direction: column;
+                    font-size: 7rem;
+                    color: #E4E0DB;
+                    overflow: hidden;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-smooth: always;
+                    will-change: transform;
+
+                    .link {
+                        will-change: transform;
+                        font-smooth: always;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+
+                    .underline {
+                        height: 3px;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
